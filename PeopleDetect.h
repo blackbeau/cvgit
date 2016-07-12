@@ -13,13 +13,12 @@ public:
 				Size maxsize,Size minsize){
 		hog.detectMultiScale(src, found);
 		vector<Rect> foundtemp;
-		for (auto r : found){
+		for (Rect r : found){
 			if (maxsize.area() > r.area() && minsize.area() < r.area())
 				foundtemp.push_back(r);
 		}
 		found = foundtemp;
-	}
+	} 
 private:
 	HOGDescriptor hog;
 };
-int main(){}
