@@ -9,6 +9,7 @@ public:
 	{
 		hog.setSVMDetector(hog.getDefaultPeopleDetector());
 	}
+//?????????????????
 	void Detect(const Mat& src, vector<Rect>& found,
 				Size maxsize,Size minsize){
 		hog.detectMultiScale(src, found);
